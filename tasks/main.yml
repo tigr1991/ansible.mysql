@@ -1,4 +1,7 @@
 ---
+- name: Update apt cache # apt-get update
+  apt:
+    update_cache: yes
 
 - name: Install required packages for mysql
   apt:
