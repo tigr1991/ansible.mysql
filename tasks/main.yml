@@ -8,6 +8,7 @@
     name: "{{ item }}"
     install_recommends: "yes"
   with_items:
+    - "mysql-common"
     - "mysql-server"
     - "mysql-client"
     - "php7.1-mysql"
