@@ -1,14 +1,10 @@
 ---
-- name: Update apt cache # apt-get update
-  apt:
-    update_cache: yes
 
-- name: Install required packages for mysql # apt-get install apt-transport-https ca-certificates curl software-properties-common
+- name: Install required packages for mysql
   apt:
     name: "{{ item }}"
     install_recommends: "yes"
   with_items:
-    - "mysql-common"
     - "mysql-server"
     - "mysql-client"
     - "php7.1-mysql"
